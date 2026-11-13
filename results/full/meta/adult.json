@@ -1,0 +1,126 @@
+{
+  "characteristics": {
+    "Dataset": "Adult",
+    "Records": 45222,
+    "Raw features": 11,
+    "Model inputs (encoded)": 84,
+    "Positive rate": 0.2478,
+    "Sensitive attribute": "sex (1 = male)",
+    "Share a=1": 0.675,
+    "Positive rate a=0": 0.1136,
+    "Positive rate a=1": 0.3125,
+    "Split": "60/20/20 holdout",
+    "Runs": 10,
+    "Train / val / test (run 1)": "27132 / 9045 / 9045"
+  },
+  "feasible": [
+    {
+      "Dataset": "Adult",
+      "Feature": "age",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[17, 90]"
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "education-num",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 0.39,
+      "Valid range (train)": "[1, 16]"
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "capital-gain",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 2000,
+      "Budget (SD units, 1x)": 0.27,
+      "Valid range (train)": "[0, 99999]"
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "capital-loss",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 200,
+      "Budget (SD units, 1x)": 0.497,
+      "Valid range (train)": "[0, 3900]"
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "hours-per-week",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 4,
+      "Budget (SD units, 1x)": 0.334,
+      "Valid range (train)": "[1, 99]"
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "workclass",
+      "Type": "categorical (7 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "marital-status",
+      "Type": "categorical (7 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "occupation",
+      "Type": "categorical (14 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "relationship",
+      "Type": "categorical (6 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "race",
+      "Type": "categorical (5 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "native-country",
+      "Type": "categorical (40 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "Adult",
+      "Feature": "sensitive attribute",
+      "Type": "sex (1 = male)",
+      "Role": "not a model input",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    }
+  ]
+}

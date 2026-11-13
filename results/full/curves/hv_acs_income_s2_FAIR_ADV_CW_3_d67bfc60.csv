@@ -1,0 +1,11 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg,dataset,run,method
+1,0.4922323226928711,0.4654512107372284,0.7954000234603882,0.03185567259788513,2.93851375579834,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+2,0.45078776047584856,0.4540194272994995,0.8009999990463257,0.035268694162368774,3.4902493953704834,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+3,0.4417603521905047,0.4518943727016449,0.7993500232696533,0.040402501821517944,3.3901820182800293,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+4,0.4364713836223521,0.447140097618103,0.7999500036239624,0.025503873825073242,4.5623297691345215,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+5,0.4321230676579983,0.44510799646377563,0.8055499792098999,0.03551208972930908,3.3712196350097656,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+6,0.4284947891184624,0.44879892468452454,0.8023499846458435,0.038000911474227905,3.4480104446411133,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+7,0.426433139405352,0.448445588350296,0.8036500215530396,0.038584619760513306,4.677236080169678,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+8,0.4237196962884132,0.44825291633605957,0.8034999966621399,0.037287235260009766,3.9330544471740723,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+9,0.4211946609172415,0.44733142852783203,0.8024500012397766,0.042980313301086426,3.35107421875,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW
+10,0.4185650197749442,0.4480256736278534,0.8033999800682068,0.04266935586929321,3.5876049995422363,hv_acs_income_s2_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s2,FAIR_ADV_CW

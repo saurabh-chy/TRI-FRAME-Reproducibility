@@ -1,0 +1,21 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg,dataset,run,method
+1,0.7147497764000525,0.7029783725738525,0.5340909361839294,0.010197663446888328,0.10625457763671875,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+2,0.6979938378700843,0.6968607902526855,0.529356062412262,0.0,0.11263775825500488,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+3,0.6949461927780738,0.6943334937095642,0.5303030014038086,0.0015723269898444414,0.10482668876647949,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+4,0.6935240993132958,0.6932253837585449,0.529356062412262,0.0,0.10086321830749512,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+5,0.6927504860437833,0.6928446292877197,0.529356062412262,0.0,0.10407543182373047,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+6,0.6922536538197444,0.6923409700393677,0.529356062412262,0.0,0.1094980239868164,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+7,0.6921625412427462,0.6922835111618042,0.529356062412262,0.0,0.10274577140808105,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+8,0.692069764320667,0.692111611366272,0.529356062412262,0.0,0.09999918937683105,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+9,0.6919143429169288,0.6922972798347473,0.529356062412262,0.0,0.09926509857177734,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+10,0.6920114480532132,0.6920603513717651,0.529356062412262,0.0,0.1052401065826416,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+11,0.6920779209870559,0.6920692920684814,0.529356062412262,0.0,0.10961127281188965,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+12,0.6917850512724656,0.691871166229248,0.529356062412262,0.0,0.10015583038330078,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+13,0.6916723709840041,0.6914064884185791,0.529356062412262,0.0,0.1003262996673584,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+14,0.6914093723663917,0.6915615200996399,0.529356062412262,0.0,0.10029745101928711,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+15,0.6914727412737333,0.6911737322807312,0.529356062412262,0.0,0.10263347625732422,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+16,0.6912341163708613,0.6914288997650146,0.529356062412262,0.0,0.10270142555236816,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+17,0.692078920511099,0.6918877363204956,0.529356062412262,0.0,0.10002303123474121,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+18,0.6916369062203628,0.6920716762542725,0.529356062412262,0.0,0.09773468971252441,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+19,0.6918052755869352,0.6913732290267944,0.529356062412262,0.0,0.10256290435791016,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW
+20,0.6915710201630225,0.6912672519683838,0.529356062412262,0.0,0.0967259407043457,tune_compas_FAIR_ADV_CW_8_66264d72,"{""lam_f"": 1.0, ""train_eps"": 2.0, ""adv_only"": true}",compas,tuning,FAIR_ADV_CW

@@ -1,0 +1,11 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg
+1,0.9239255448557296,0.786195695400238,0.8437811136245728,0.10844524949789047,1.5957894325256348,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+2,0.762045331721036,0.7623274922370911,0.8495301008224487,0.12232508510351181,1.5953073501586914,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+3,0.7360189264675356,0.7537078857421875,0.8505251407623291,0.10707015544176102,2.419369697570801,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+4,0.7270329915127665,0.7530592083930969,0.8494195938110352,0.10664235055446625,2.6850953102111816,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+5,0.7235652596320746,0.7497838139533997,0.8499723672866821,0.09693029522895813,2.3424720764160156,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+6,0.7188658753655991,0.7513805031776428,0.8505251407623291,0.09991493821144104,2.3914430141448975,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+7,0.7149215852314571,0.7556643486022949,0.8476506471633911,0.0799119770526886,2.4415793418884277,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+8,0.7118452539983785,0.7540363669395447,0.8511884808540344,0.11616801470518112,2.344208002090454,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+9,0.7094132888991878,0.7519768476486206,0.8510779142379761,0.10733973979949951,2.967458963394165,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+10,0.7093232645178741,0.7524006962776184,0.8501935005187988,0.0854407548904419,2.3380489349365234,abl_adult_s0_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"

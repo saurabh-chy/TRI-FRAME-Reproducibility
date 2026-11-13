@@ -1,0 +1,10 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg
+1,0.9014388350945599,0.784477174282074,0.8393587470054626,0.10265662521123886,1.61106538772583,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+2,0.7688486457995649,0.7613890767097473,0.8430072069168091,0.11397682130336761,1.7789039611816406,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+3,0.7419268460768573,0.7438438534736633,0.8482034206390381,0.11897896230220795,2.3883249759674072,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+4,0.7319427638683679,0.7430902719497681,0.8488667607307434,0.11028627306222916,2.731548309326172,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+5,0.7272157505998071,0.7440784573554993,0.8469873070716858,0.1000179797410965,2.6658034324645996,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+6,0.7234632564040849,0.7432379722595215,0.8506357073783875,0.11645884066820145,2.6541237831115723,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+7,0.7211217250464097,0.7458066344261169,0.8480928540229797,0.11959315836429596,2.486905097961426,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+8,0.7179427945388938,0.745294988155365,0.8500829339027405,0.12410258501768112,2.472649574279785,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"
+9,0.7152688441411504,0.7448655962944031,0.8507462739944458,0.11226286739110947,2.432468891143799,abl_adult_s1_Unconstrainedtrainingattack_8e45973c,"{""lam_f"": 0.1, ""lam_r"": 1.0, ""lam_fa"": 0.3, ""unconstrained"": true}"

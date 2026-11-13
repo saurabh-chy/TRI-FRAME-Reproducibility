@@ -1,0 +1,12 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg,dataset,run,method
+1,0.49992543395529404,0.45446330308914185,0.7996500134468079,0.03955981135368347,2.6049740314483643,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+2,0.4528768094296151,0.44804948568344116,0.8033000230789185,0.039096832275390625,3.971130847930908,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+3,0.445434233863303,0.44338148832321167,0.805899977684021,0.04226940870285034,4.943638563156128,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+4,0.4397766202054125,0.44175684452056885,0.8083500266075134,0.04199036955833435,5.316657543182373,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+5,0.435324908444222,0.439097136259079,0.8071500062942505,0.03617161512374878,5.576184272766113,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+6,0.4323631111611711,0.4379420578479767,0.8090500235557556,0.04157933592796326,3.4651296138763428,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+7,0.4300994342945992,0.439347505569458,0.8120499849319458,0.0444013774394989,3.5046658515930176,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+8,0.42727641831053065,0.4381730854511261,0.8077499866485596,0.04133966565132141,3.4433419704437256,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+9,0.4252161109701116,0.4390260577201843,0.809149980545044,0.038942039012908936,5.104579925537109,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+10,0.423679115163519,0.4402153789997101,0.8103500008583069,0.05445510149002075,4.8747313022613525,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW
+11,0.4220347712648676,0.439646452665329,0.8097000122070312,0.04809975624084473,3.3383684158325195,hv_acs_income_s3_FAIR_ADV_CW_3_d67bfc60,"{""lam_f"": 0.3, ""train_eps"": 0.5, ""adv_only"": true}",acs_income,s3,FAIR_ADV_CW

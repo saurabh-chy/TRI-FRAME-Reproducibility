@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the paper."
+title: "Fairness Under Feasible Edits: Realistic Record Manipulation Breaks Group-Fairness Audits of Tabular Classifiers, and How to Train Against It"
+authors:
+  - family-names: Choudhary
+    given-names: Saurabh
+  - family-names: Malhotra
+    given-names: Sachin
+  - family-names: Janarthanan
+    given-names: Midhunchakkaravarthy
+version: 1.0.0
+license: MIT
+repository-code: "[public repository URL]"

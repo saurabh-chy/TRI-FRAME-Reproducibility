@@ -1,0 +1,12 @@
+[10:54:24] MODE=full | data: C:\Users\saura\Downloads | output: C:\Users\saura\output\full | threads=8
+[10:54:28] Adult: 48842 rows read from ['adult.data', 'adult.test'], 45222 after dropping missing values
+[10:54:30] === Adult: 45222 rows, 10 runs, positive rate 0.248, group a=1 share 0.675
+[10:54:39] ACS Income (CA): 100000 rows from ['psam_p06.csv']
+[10:54:45] === ACS Income: 100000 rows, 10 runs, positive rate 0.409, group a=1 share 0.529
+[10:54:46] COMPAS: 7214 rows, 5278 after ProPublica filtering and Black/White restriction
+[10:54:46] === COMPAS: 5278 rows, 10 runs, positive rate 0.470, group a=1 share 0.398
+[10:54:47] South German Credit: 1000 rows from SouthGermanCredit.asc; group sizes a=0: 190, a=1: 810
+[10:54:47] === South German Credit: 1000 rows, 25 runs, positive rate 0.700, group a=1 share 0.810
+[10:54:56] ACS shift: skipping TX: No module named 'folktables'
+[10:54:58] ACS shift: skipping NY: No module named 'folktables'
+[10:54:59] ACS shift: skipping FL: No module named 'folktables'

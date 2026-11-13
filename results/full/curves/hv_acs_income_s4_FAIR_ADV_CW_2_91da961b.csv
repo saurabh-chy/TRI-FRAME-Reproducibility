@@ -1,0 +1,10 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg,dataset,run,method
+1,0.501203660001146,0.45963919162750244,0.7836499810218811,0.03192046284675598,6.298620700836182,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+2,0.4597378076391017,0.4560893476009369,0.7882999777793884,0.031530171632766724,5.269473314285278,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+3,0.4549377232155901,0.45267000794410706,0.7885500192642212,0.03837195038795471,5.7268757820129395,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+4,0.4509165766391348,0.4521571397781372,0.7896000146865845,0.040200620889663696,4.649283409118652,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+5,0.4467755634733971,0.45566684007644653,0.7878999710083008,0.04103720188140869,4.702310562133789,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+6,0.4437402192582475,0.4547881484031677,0.7868499755859375,0.03337952494621277,4.347745180130005,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+7,0.4417683871502572,0.4542739689350128,0.7863500118255615,0.039002299308776855,4.731133460998535,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+8,0.4389749849096258,0.4532810151576996,0.7893999814987183,0.0513896644115448,4.473546504974365,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW
+9,0.4363048406357461,0.45530441403388977,0.787850022315979,0.042666226625442505,4.132694244384766,hv_acs_income_s4_FAIR_ADV_CW_2_91da961b,"{""lam_f"": 0.1, ""train_eps"": 2.0, ""adv_only"": true}",acs_income,s4,FAIR_ADV_CW

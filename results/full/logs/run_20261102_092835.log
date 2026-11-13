@@ -1,0 +1,7 @@
+[09:28:35] MODE=full | data: C:\Users\saura\Downloads | output: C:\Users\saura\output\full | threads=8
+[09:28:37] Adult: 48842 rows read from ['adult.data', 'adult.test'], 45222 after dropping missing values
+[09:28:39] === Adult: 45222 rows, 10 runs, positive rate 0.248, group a=1 share 0.675
+[09:28:44] ACS Income (CA): 100000 rows from ['psam_p06.csv']
+[09:28:47] === ACS Income: 100000 rows, 10 runs, positive rate 0.409, group a=1 share 0.529
+[09:40:10] acs_income s1 FAIR_ADV     acc=0.8159 dp=0.0410 (9 ep, 4.8s/ep, total 680s)
+[09:52:07] acs_income s1 FAIR_ADV_CW  acc=0.8112 dp=0.0670 (14 ep, 3.0s/ep, total 717s)

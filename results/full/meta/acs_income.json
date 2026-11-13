@@ -1,0 +1,108 @@
+{
+  "characteristics": {
+    "Dataset": "ACS Income",
+    "Records": 100000,
+    "Raw features": 9,
+    "Model inputs (encoded)": 148,
+    "Positive rate": 0.4091,
+    "Sensitive attribute": "SEX (1 = male)",
+    "Share a=1": 0.529,
+    "Positive rate a=0": 0.3482,
+    "Positive rate a=1": 0.4634,
+    "Split": "60/20/20 holdout",
+    "Runs": 10,
+    "Train / val / test (run 1)": "60000 / 20000 / 20000"
+  },
+  "feasible": [
+    {
+      "Dataset": "ACS Income",
+      "Feature": "AGEP",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[17, 94]"
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "SCHL",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 0.253,
+      "Valid range (train)": "[1, 24]"
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "WKHP",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 4,
+      "Budget (SD units, 1x)": 0.308,
+      "Valid range (train)": "[1, 99]"
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "COW",
+      "Type": "categorical (8 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "MAR",
+      "Type": "categorical (5 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "OCCP_GRP",
+      "Type": "categorical (99 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "POBP_GRP",
+      "Type": "categorical (6 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "RELP",
+      "Type": "categorical (18 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "RAC1P",
+      "Type": "categorical (9 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "ACS Income",
+      "Feature": "sensitive attribute",
+      "Type": "SEX (1 = male)",
+      "Role": "not a model input",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    }
+  ]
+}

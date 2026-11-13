@@ -1,0 +1,196 @@
+{
+  "MODE": "full",
+  "settings": {
+    "datasets": [
+      "adult",
+      "acs_income",
+      "compas",
+      "south_german_credit"
+    ],
+    "n_seeds": 10,
+    "sgc_repeats": 5,
+    "subsample": null,
+    "max_epochs": 50,
+    "patience": 5,
+    "k_train": 5,
+    "eval_eps": [
+      0.0,
+      0.25,
+      0.5,
+      1.0,
+      2.0,
+      4.0
+    ],
+    "eval_steps": 50,
+    "eval_restarts": 5,
+    "tune_budget": 9,
+    "tune_steps": 20,
+    "combined_betas": [
+      0.5,
+      1.0,
+      2.0
+    ],
+    "run_ablations": true,
+    "ablation_seeds": 5,
+    "run_sensitivity": true,
+    "sens_seeds": 3,
+    "run_certified": true,
+    "run_gbdt": true,
+    "run_acs_shift": true
+  },
+  "specs": {
+    "adult": {
+      "display": "Adult",
+      "numeric": [
+        "age",
+        "education-num",
+        "capital-gain",
+        "capital-loss",
+        "hours-per-week"
+      ],
+      "categorical": [
+        "workclass",
+        "marital-status",
+        "occupation",
+        "relationship",
+        "race",
+        "native-country"
+      ],
+      "integer": [
+        "age",
+        "education-num",
+        "capital-gain",
+        "capital-loss",
+        "hours-per-week"
+      ],
+      "budget": {
+        "hours-per-week": 4,
+        "capital-gain": 2000,
+        "capital-loss": 200,
+        "education-num": 1
+      },
+      "sensitive_name": "sex (1 = male)",
+      "split": "holdout"
+    },
+    "acs_income": {
+      "display": "ACS Income",
+      "numeric": [
+        "AGEP",
+        "SCHL",
+        "WKHP"
+      ],
+      "categorical": [
+        "COW",
+        "MAR",
+        "OCCP_GRP",
+        "POBP_GRP",
+        "RELP",
+        "RAC1P"
+      ],
+      "integer": [
+        "AGEP",
+        "SCHL",
+        "WKHP"
+      ],
+      "budget": {
+        "WKHP": 4,
+        "SCHL": 1
+      },
+      "sensitive_name": "SEX (1 = male)",
+      "split": "holdout"
+    },
+    "compas": {
+      "display": "COMPAS",
+      "numeric": [
+        "age",
+        "priors_count",
+        "juv_fel_count",
+        "juv_misd_count",
+        "juv_other_count"
+      ],
+      "categorical": [
+        "sex",
+        "c_charge_degree"
+      ],
+      "integer": [
+        "age",
+        "priors_count",
+        "juv_fel_count",
+        "juv_misd_count",
+        "juv_other_count"
+      ],
+      "budget": {
+        "priors_count": 1,
+        "juv_fel_count": 1,
+        "juv_misd_count": 1,
+        "juv_other_count": 1
+      },
+      "sensitive_name": "race (1 = Caucasian, 0 = African-American)",
+      "split": "holdout"
+    },
+    "south_german_credit": {
+      "display": "South German Credit",
+      "numeric": [
+        "duration",
+        "amount",
+        "installment_rate",
+        "present_residence",
+        "number_credits"
+      ],
+      "categorical": [
+        "status",
+        "credit_history",
+        "purpose",
+        "savings",
+        "employment_duration",
+        "personal_status_sex",
+        "other_debtors",
+        "property",
+        "other_installment_plans",
+        "housing",
+        "job",
+        "people_liable",
+        "telephone",
+        "foreign_worker"
+      ],
+      "integer": [
+        "duration",
+        "amount",
+        "installment_rate",
+        "present_residence",
+        "number_credits"
+      ],
+      "budget": {
+        "duration": 6,
+        "amount": 500
+      },
+      "sensitive_name": "age (1 = over 25, 0 = 25 or under)",
+      "split": "cv"
+    }
+  },
+  "ACS_YEAR": "2018",
+  "ACS_STATES": [
+    "CA"
+  ],
+  "ACS_MAX_ROWS": 100000,
+  "INCLUDE_SENSITIVE_AS_FEATURE": false,
+  "ROUND_INTEGER_FEATURES": true,
+  "HIDDEN": [
+    128,
+    64
+  ],
+  "LR": 0.001,
+  "BATCH_SIZE": 256,
+  "LAMBDA_LEVELS": [
+    0.1,
+    0.3,
+    1.0
+  ],
+  "ACC_TOLERANCE": 0.01,
+  "versions": {
+    "python": "3.8.8",
+    "torch": "2.4.1+cpu",
+    "numpy": "1.24.4",
+    "pandas": "1.5.3"
+  }
+}

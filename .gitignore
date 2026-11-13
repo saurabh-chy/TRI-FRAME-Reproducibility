@@ -1,0 +1,9 @@
+# datasets are not redistributed
+download/
+# local runs (the reported run is in results/full)
+output/
+reproduced/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+*_console.log

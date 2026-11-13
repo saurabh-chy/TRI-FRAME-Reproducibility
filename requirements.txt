@@ -1,0 +1,11 @@
+# Versions used for the reported run (Windows, Anaconda, Python 3.8.8)
+torch==2.4.1          # CPU build is sufficient: pip install torch==2.4.1 --index-url https://download.pytorch.org/whl/cpu
+numpy==1.24.4
+pandas==1.5.3
+scikit-learn==1.2.2
+scipy==1.10.1
+matplotlib==3.3.4
+# Optional: only if the ACS person file (psam_p06.csv) is not placed in download/; not used for the reported run
+folktables==0.0.12
+# Only for building the supplement as a Word file
+python-docx==0.8.11

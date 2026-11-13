@@ -1,0 +1,26 @@
+| Dataset | Method | Seconds per epoch | Epochs (early stopping) |
+| --- | --- | --- | --- |
+| Adult | ERM | 0.4795 ± 0.1759 | 12.9000 ± 2.4698 |
+| Adult | Fair-Only | 0.5621 ± 0.2238 | 12.5000 ± 2.5927 |
+| Adult | Robust-Only | 1.9676 ± 0.6148 | 16.0000 ± 1.8257 |
+| Adult | Fair adv. training (clean + adv. loss) | 2.5453 ± 0.9877 | 12.9000 ± 2.2336 |
+| Adult | Fair adv. training (Chai & Wang 2023) | 2.3028 ± 0.7671 | 14.6000 ± 2.3664 |
+| Adult | TRI-FRAME | 4.3014 ± 1.1119 | 13.2000 ± 2.7809 |
+| ACS Income | ERM | 0.9681 ± 0.5545 | 10.9000 ± 1.4491 |
+| ACS Income | Fair-Only | 1.2186 ± 0.5149 | 12.1000 ± 2.1318 |
+| ACS Income | Robust-Only | 3.8232 ± 1.0602 | 11.4000 ± 1.6465 |
+| ACS Income | Fair adv. training (clean + adv. loss) | 3.9262 ± 1.3647 | 10.8000 ± 1.3984 |
+| ACS Income | Fair adv. training (Chai & Wang 2023) | 3.3623 ± 0.9794 | 12.3000 ± 2.0028 |
+| ACS Income | TRI-FRAME | 6.8953 ± 2.3536 | 11.5000 ± 2.1213 |
+| COMPAS | ERM | 0.0282 ± 0.0027 | 18.6000 ± 4.9933 |
+| COMPAS | Fair-Only | 0.0376 ± 0.0050 | 18.6000 ± 4.9933 |
+| COMPAS | Robust-Only | 0.1124 ± 0.0104 | 21.4000 ± 5.2957 |
+| COMPAS | Fair adv. training (clean + adv. loss) | 0.1137 ± 0.0029 | 20.6000 ± 11.1475 |
+| COMPAS | Fair adv. training (Chai & Wang 2023) | 0.1146 ± 0.0057 | 35.8000 ± 8.4564 |
+| COMPAS | TRI-FRAME | 0.2063 ± 0.0115 | 20.3000 ± 6.3430 |
+| South German Credit | ERM | 0.0081 ± 0.0007 | 25.0800 ± 3.9362 |
+| South German Credit | Fair-Only | 0.0104 ± 0.0011 | 29.4400 ± 5.2048 |
+| South German Credit | Robust-Only | 0.0326 ± 0.0036 | 25.4000 ± 3.3040 |
+| South German Credit | Fair adv. training (clean + adv. loss) | 0.0349 ± 0.0042 | 28.2800 ± 4.7480 |
+| South German Credit | Fair adv. training (Chai & Wang 2023) | 0.0348 ± 0.0052 | 29.0000 ± 5.2440 |
+| South German Credit | TRI-FRAME | 0.0600 ± 0.0054 | 29.0800 ± 4.9153 |

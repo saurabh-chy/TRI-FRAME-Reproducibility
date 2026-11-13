@@ -1,0 +1,6 @@
+| Dataset | Records | Raw features | Model inputs (encoded) | Positive rate | Sensitive attribute | Share a=1 | Positive rate a=0 | Positive rate a=1 | Split | Runs | Train / val / test (run 1) |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| ACS Income | 100000 | 9 | 148 | 0.4091 | SEX (1 = male) | 0.529 | 0.3482 | 0.4634 | 60/20/20 holdout | 10 | 60000 / 20000 / 20000 |
+| Adult | 45222 | 11 | 84 | 0.2478 | sex (1 = male) | 0.675 | 0.1136 | 0.3125 | 60/20/20 holdout | 10 | 27132 / 9045 / 9045 |
+| COMPAS | 5278 | 7 | 9 | 0.4704 | race (1 = Caucasian, 0 = African-American) | 0.3984 | 0.5231 | 0.3909 | 60/20/20 holdout | 10 | 3166 / 1056 / 1056 |
+| South German Credit | 1000 | 19 | 61 | 0.7 | age (1 = over 25, 0 = 25 or under) | 0.81 | 0.5789 | 0.7284 | repeated stratified 5-fold (val = 25% of train) | 25 | 600 / 200 / 200 |

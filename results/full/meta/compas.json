@@ -1,0 +1,90 @@
+{
+  "characteristics": {
+    "Dataset": "COMPAS",
+    "Records": 5278,
+    "Raw features": 7,
+    "Model inputs (encoded)": 9,
+    "Positive rate": 0.4704,
+    "Sensitive attribute": "race (1 = Caucasian, 0 = African-American)",
+    "Share a=1": 0.3984,
+    "Positive rate a=0": 0.5231,
+    "Positive rate a=1": 0.3909,
+    "Split": "60/20/20 holdout",
+    "Runs": 10,
+    "Train / val / test (run 1)": "3166 / 1056 / 1056"
+  },
+  "feasible": [
+    {
+      "Dataset": "COMPAS",
+      "Feature": "age",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[18, 79]"
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "priors_count",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 0.206,
+      "Valid range (train)": "[0, 37]"
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "juv_fel_count",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 2.26,
+      "Valid range (train)": "[0, 8]"
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "juv_misd_count",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 2.079,
+      "Valid range (train)": "[0, 12]"
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "juv_other_count",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 1,
+      "Budget (SD units, 1x)": 2.238,
+      "Valid range (train)": "[0, 6]"
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "sex",
+      "Type": "categorical (2 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "c_charge_degree",
+      "Type": "categorical (2 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "COMPAS",
+      "Feature": "sensitive attribute",
+      "Type": "race (1 = Caucasian, 0 = African-American)",
+      "Role": "not a model input",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    }
+  ]
+}

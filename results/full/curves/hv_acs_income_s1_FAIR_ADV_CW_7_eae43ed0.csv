@@ -1,0 +1,10 @@
+epoch,train_objective,val_objective,val_acc,val_dp,sec,key,cfg,dataset,run,method
+1,0.5305943763002436,0.4653256833553314,0.7875000238418579,0.003529071807861328,3.5547382831573486,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+2,0.48700196679602276,0.46163079142570496,0.7919999957084656,0.009251117706298828,3.898818254470825,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+3,0.4799393234100748,0.4564971327781677,0.7968000173568726,0.0068398118019104,4.46030330657959,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+4,0.47724299253301417,0.4519033432006836,0.7965499758720398,0.0022786855697631836,4.216202259063721,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+5,0.47282807015358136,0.4538743197917938,0.7989500164985657,0.0053237080574035645,3.3839330673217773,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+6,0.4689959947099077,0.4531780779361725,0.7998499870300293,0.006124407052993774,3.404109477996826,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+7,0.4675359720879413,0.4524249732494354,0.7961999773979187,0.002335876226425171,3.7114601135253906,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+8,0.46443031544380997,0.4563700258731842,0.8032500147819519,0.01696726679801941,3.998387575149536,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW
+9,0.45992383779363427,0.45489832758903503,0.8030999898910522,0.018066763877868652,3.4146740436553955,hv_acs_income_s1_FAIR_ADV_CW_7_eae43ed0,"{""lam_f"": 1.0, ""train_eps"": 1.0, ""adv_only"": true}",acs_income,s1,FAIR_ADV_CW

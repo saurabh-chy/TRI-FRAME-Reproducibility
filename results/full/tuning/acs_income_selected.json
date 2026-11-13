@@ -1,0 +1,29 @@
+{
+  "selected": {
+    "ERM": {},
+    "FAIR_ONLY": {
+      "lam_f": 0.547722557505166
+    },
+    "ROBUST_ONLY": {
+      "lam_r": 0.1,
+      "train_eps": 2.0
+    },
+    "FAIR_ADV": {
+      "lam_f": 0.3,
+      "lam_r": 0.1
+    },
+    "FAIR_ADV_CW": {
+      "lam_f": 0.1,
+      "train_eps": 0.5,
+      "adv_only": true
+    },
+    "TRIFRAME": {
+      "lam_f": 0.1,
+      "lam_r": 0.1,
+      "lam_fa": 0.1
+    }
+  },
+  "erm_val_acc": 0.822350025177002,
+  "rule": "lowest val DP under group-targeted attack among configs with val acc >= ERM - 0.01",
+  "budget": 9
+}

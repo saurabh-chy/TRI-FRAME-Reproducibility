@@ -1,0 +1,198 @@
+{
+  "characteristics": {
+    "Dataset": "South German Credit",
+    "Records": 1000,
+    "Raw features": 19,
+    "Model inputs (encoded)": 61,
+    "Positive rate": 0.7,
+    "Sensitive attribute": "age (1 = over 25, 0 = 25 or under)",
+    "Share a=1": 0.81,
+    "Positive rate a=0": 0.5789,
+    "Positive rate a=1": 0.7284,
+    "Split": "repeated stratified 5-fold (val = 25% of train)",
+    "Runs": 25,
+    "Train / val / test (run 1)": "600 / 200 / 200"
+  },
+  "feasible": [
+    {
+      "Dataset": "South German Credit",
+      "Feature": "duration",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 6,
+      "Budget (SD units, 1x)": 0.485,
+      "Valid range (train)": "[4, 60]"
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "amount",
+      "Type": "numeric, integer",
+      "Role": "mutable",
+      "Budget (raw units, 1x)": 500,
+      "Budget (SD units, 1x)": 0.177,
+      "Valid range (train)": "[250, 15945]"
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "installment_rate",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[1, 4]"
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "present_residence",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[1, 4]"
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "number_credits",
+      "Type": "numeric, integer",
+      "Role": "immutable",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": "[1, 4]"
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "status",
+      "Type": "categorical (4 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "credit_history",
+      "Type": "categorical (5 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "purpose",
+      "Type": "categorical (10 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "savings",
+      "Type": "categorical (5 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "employment_duration",
+      "Type": "categorical (5 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "personal_status_sex",
+      "Type": "categorical (4 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "other_debtors",
+      "Type": "categorical (3 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "property",
+      "Type": "categorical (4 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "other_installment_plans",
+      "Type": "categorical (3 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "housing",
+      "Type": "categorical (3 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "job",
+      "Type": "categorical (4 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "people_liable",
+      "Type": "categorical (2 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "telephone",
+      "Type": "categorical (2 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "foreign_worker",
+      "Type": "categorical (2 levels)",
+      "Role": "frozen",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    },
+    {
+      "Dataset": "South German Credit",
+      "Feature": "sensitive attribute",
+      "Type": "age (1 = over 25, 0 = 25 or under)",
+      "Role": "not a model input",
+      "Budget (raw units, 1x)": "",
+      "Budget (SD units, 1x)": "",
+      "Valid range (train)": ""
+    }
+  ]
+}
