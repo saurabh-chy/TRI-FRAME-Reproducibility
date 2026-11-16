@@ -6,7 +6,8 @@ Classifiers, and How to Train Against It"** (Choudhary, Malhotra and Janarthanan
 The package reproduces every number, table and figure in the paper and the supplementary material: the feasible
 threat model and attacks, the six training methods (ERM, Fair-Only, Robust-Only, fair adversarial training,
 the Chai & Wang-style baseline and TRI-FRAME), tuning, evaluation, per-feature attribution, hypervolume and the
-statistical tests.
+statistical tests, and the exact worst-case analysis of Proposition 1 (per-record flip attacks and certified
+interval bounds).
 
 ## Folder layout
 
@@ -19,13 +20,18 @@ TRI-FRAME_reproducibility/
 │   ├── TRI_FRAME_posthoc.py         per-feature attribution and hypervolume over all tuned configurations
 │   ├── run_full.bat / run_full.sh   run the pipeline with automatic restart
 │   ├── run_posthoc.bat / .sh        run attribution + hypervolume (all runs) with automatic restart
+│   ├── TRI_FRAME_bounds.py          flip shares, exact worst case (Proposition 1) and certified bounds
+│   ├── run_bounds.bat / .sh         run the bounds analysis with automatic restart
 │   └── run_hypervolume_all_runs.bat hypervolume only (all runs)
 ├── analysis/
 │   ├── statistical_tests.py         paired and corrected resampled t-tests, Holm correction, Wilcoxon
 │   ├── make_figures_tables.py       Figures 1–6 and Tables 5–7 of the paper
-│   ├── make_supplement.py           supplementary material (Tables S1–S26)
-│   └── run_analysis.bat / .sh       runs the three scripts above
+│   ├── bounds_analysis.py           Figure 7 and the numbers of Section 6.5
+│   ├── make_supplement.py           supplementary material (Tables S1–S29)
+│   └── run_analysis.bat / .sh       runs the scripts above
 ├── notebook/TRI_FRAME_v2_pipeline.ipynb   the same pipeline as a notebook (MODE "smoke" / "pilot" / "full")
+├── notebook/TRI_FRAME_check_files.ipynb   checks that the dataset files (and, later, saved models) are in place
+├── notebook/TRI_FRAME_bounds.ipynb        the bounds analysis of step 5 as a notebook
 ├── results/             per-run results of the reported experiments (CSV), so the analysis can be rerun without training
 ├── data/README.md       dataset sources and file names
 ├── requirements.txt
@@ -58,10 +64,15 @@ pip install -r requirements.txt
 4. **Post-hoc analyses (roughly half a day to a day).** In `experiments/`, run `run_posthoc.bat` or `bash run_posthoc.sh`.
    This computes the per-feature attribution and evaluates every tuned configuration of every method on the
    test set of every run, for the hypervolume. Also resumable (`output/full/posthoc/done_posthoc.json`).
-5. **Statistics, tables, figures and supplement (a few minutes).** In `analysis/`, run
+5. **Exact worst case and certified bounds (several hours).** In `experiments/`, run `run_bounds.bat` or
+   `bash run_bounds.sh` (or `notebook/TRI_FRAME_bounds.ipynb`). It reloads the saved models, computes for every
+   selected model, run and budget, and for every tuned configuration on the first run, the share of each group
+   that a feasible edit can flip (per-record attack: lower bound; interval bound propagation: upper bound), and
+   writes them to `output/full/bounds/`. Resumable (`output/full/bounds/done_bounds.json`).
+6. **Statistics, tables, figures and supplement (a few minutes).** In `analysis/`, run
    `run_analysis.bat ..\output\full` or `bash run_analysis.sh ../output/full`. Outputs go to `reproduced/`.
 
-To rerun only step 5 on the reported results, point it at `results/full` instead of `output/full`.
+To rerun only step 6 on the reported results, point it at `results/full` instead of `output/full`.
 
 ## Determinism
 

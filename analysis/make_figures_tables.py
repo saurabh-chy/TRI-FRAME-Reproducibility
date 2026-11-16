@@ -21,10 +21,10 @@ COL = {"ERM": "#6b6b6b", "FAIR_ONLY": "#eb6834", "ROBUST_ONLY": "#1baf7a", "FAIR
        "FAIR_ADV_CW": "#e87ba4", "TRIFRAME": "#2a78d6"}
 MK = {"ERM": "o", "FAIR_ONLY": "s", "ROBUST_ONLY": "^", "FAIR_ADV": "D", "FAIR_ADV_CW": "P", "TRIFRAME": "*"}
 LS = {"ERM": "--", "FAIR_ONLY": "-", "ROBUST_ONLY": "-", "FAIR_ADV": "-", "FAIR_ADV_CW": "-", "TRIFRAME": "-"}
-plt.rcParams.update({"font.family": "DejaVu Sans", "font.size": 9, "axes.spines.top": False,
+plt.rcParams.update({"ps.fonttype": 42, "pdf.fonttype": 42, "font.family": ["Arial", "Liberation Sans", "DejaVu Sans"], "font.size": 9, "axes.spines.top": False,
                      "axes.spines.right": False, "axes.grid": True, "grid.color": "#e6e6e6", "grid.linewidth": 0.6,
                      "axes.edgecolor": "#888888", "axes.labelcolor": "#222222", "xtick.color": "#444444",
-                     "ytick.color": "#444444", "legend.frameon": False, "savefig.dpi": 300})
+                     "ytick.color": "#444444", "legend.frameon": False, "savefig.dpi": 600})
 
 R = pd.read_csv(f"{F}/results_main.csv")
 FALLBACK = {("acs_income", "FAIR_ADV_CW"), ("acs_income", "TRIFRAME"), ("compas", "FAIR_ADV_CW")}
@@ -34,6 +34,12 @@ md = {}
 def save(fig, name):
     fig.savefig(f"{OUT}/{name}.png", bbox_inches="tight")
     fig.savefig(f"{OUT}/{name}.pdf", bbox_inches="tight")
+    # journal files: Fig<n>.eps (vector, fonts embedded) and Fig<n>.tif (600 dpi, RGB)
+    n = name.split("_")[0].replace("figure", "")
+    fig.savefig(f"{OUT}/Fig{n}.eps", bbox_inches="tight")
+    fig.savefig(f"{OUT}/Fig{n}.tif", bbox_inches="tight", dpi=600, facecolor="white")
+    from PIL import Image
+    Image.open(f"{OUT}/Fig{n}.tif").convert("RGB").save(f"{OUT}/Fig{n}.tif", dpi=(600, 600), compression="tiff_lzw")
     plt.close(fig)
 
 
@@ -115,7 +121,7 @@ for ax, d in zip(axs, DS):
                 label=MN[m], zorder=3 if m == "TRIFRAME" else 2)
         ax.fill_between(range(len(xs)), lo, hi, color=COL[m], alpha=0.12, lw=0)
     ax.set_xticks(range(6)); ax.set_xticklabels(["0", ".25", ".5", "1", "2", "4"])
-    ax.set_title(DSN[d], fontsize=9); ax.set_xlabel("Budget multiplier m"); ax.set_ylim(bottom=0)
+    ax.set_title(f"({'abcd'[DS.index(d)]}) {DSN[d]}", fontsize=9); ax.set_xlabel("Budget multiplier m"); ax.set_ylim(bottom=0)
 axs[0].set_ylabel("DP gap, group-targeted attack")
 axs[0].legend(loc="upper center", bbox_to_anchor=(2.35, -0.3), ncol=6, fontsize=7, handlelength=2.2)
 fig.subplots_adjust(wspace=0.32)
@@ -138,7 +144,7 @@ for ax, d in zip(axs, DS):
     ax.bar(range(len(feats)), vals, color=cols, edgecolor="white", linewidth=1.5, width=0.72)
     ax.axhline(g["clean_dp"].iloc[0], color="#6b6b6b", ls="--", lw=1)
     ax.set_xticks(range(len(feats))); ax.set_xticklabels([NICE.get(f, f) for f in feats], rotation=55, ha="right", fontsize=7)
-    ax.set_title(DSN[d], fontsize=9); ax.grid(axis="x", visible=False); ax.set_ylim(0, max(vals) * 1.15)
+    ax.set_title(f"({'abcd'[DS.index(d)]}) {DSN[d]}", fontsize=9); ax.grid(axis="x", visible=False); ax.set_ylim(0, max(vals) * 1.15)
     md["fig4"][DSN[d]] = {NICE.get(f, f): round(v, 3) for f, v in zip(feats, vals)} | {"clean": round(g["clean_dp"].iloc[0], 3)}
 axs[0].set_ylabel("ERM DP gap under attack (1×)")
 axs[0].plot([], [], ls="--", color="#6b6b6b", lw=1, label="clean gap (no attack)")
@@ -165,7 +171,7 @@ for ax, d in zip(axs, DS):
                 front.append((gx, ay)); best = ay
         if len(front) > 1:
             fx, fy = zip(*front); ax.step(fx, fy, where="post", color=COL[m], lw=1.1, alpha=0.9)
-    ax.set_title(DSN[d], fontsize=9); ax.set_xlabel("DP gap under attack")
+    ax.set_title(f"({'abcd'[DS.index(d)]}) {DSN[d]}", fontsize=9); ax.set_xlabel("DP gap under attack")
     ax.xaxis.set_major_locator(matplotlib.ticker.MaxNLocator(3)); ax.yaxis.set_major_locator(matplotlib.ticker.MaxNLocator(4))
 axs[0].set_ylabel("Clean test accuracy")
 axs[0].legend(loc="upper center", bbox_to_anchor=(2.35, -0.3), ncol=6, fontsize=7, handletextpad=0.3)
@@ -182,7 +188,8 @@ axs[0].set_ylabel("DP gap, group-targeted attack"); axs[0].set_ylim(bottom=0)
 axs[1].errorbar(range(len(sc)), sc.acc_mean, yerr=sc.acc_std, color="#256abf", marker="o", ms=4, lw=1.4, capsize=2)
 axs[1].set_ylabel("Clean accuracy")
 for ax in axs:
-    ax.set_xticks(range(len(sc))); ax.set_xticklabels(xl); ax.set_xlabel("λ_fa (other weights fixed)")
+    ax.set_xticks(range(len(sc))); ax.set_xticklabels(xl); ax.set_xlabel(r"$\lambda_{fa}$ (other weights fixed)")
+axs[0].set_title("(a)", fontsize=9, loc="left"); axs[1].set_title("(b)", fontsize=9, loc="left")
 fig.subplots_adjust(wspace=0.35)
 save(fig, "figure6_lambda_fa")
 md["fig6"] = {"lam": list(sc.lam_fa), "acc": [round(v, 4) for v in sc.acc_mean], "dp_targeted": [round(v, 4) for v in st.dp_mean]}

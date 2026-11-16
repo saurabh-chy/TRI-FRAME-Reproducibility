@@ -304,8 +304,43 @@ table(["λ_fa"] + [h for _, _, h in SEL], rows)
 P("## S13 Ablations")
 P("")
 ab = pd.read_csv(f"{R}/tables/table_ablations.csv")
-P("*Table S27. Ablations on Adult (five runs, mean ± SD), as in Table 8 of the paper. The covariance row replaces the soft DP penalty by the decision-boundary covariance of Zafar et al. (2017); the unconstrained row trains against perturbations of every numeric feature, including immutable ones, without range or integer constraints; evaluation always uses the feasible set.*")
+ab = ab.replace({"Covariance surrogate (v1)": "Covariance surrogate"})
+P("*Table S27. Ablations on Adult (five runs, mean ± SD), summarised in Section 6.4 of the paper. The covariance row replaces the soft DP penalty by the decision-boundary covariance of Zafar et al. (2017); the unconstrained row trains against perturbations of every numeric feature, including immutable ones, without range or integer constraints; evaluation always uses the feasible set.*")
 P("")
 table(list(ab.columns), ab.values.tolist())
+
+
+# ---------------- S14 exact worst case and certified bounds (Proposition 1; needs output/full/bounds)
+import os
+if os.path.exists(f"{R}/bounds/bounds_main.csv"):
+    b = pd.read_csv(f"{R}/bounds/bounds_main.csv")
+    b["clean_dp"] = (b.pos_1 - b.pos_0).abs()
+    def worst(kind):
+        r1, r0 = b.pos_1, b.pos_0
+        u1, v1, u0, v0 = b[f"up_{kind}_1"], b[f"down_{kind}_1"], b[f"up_{kind}_0"], b[f"down_{kind}_0"]
+        return np.maximum(np.maximum(r1 - r0 + u1, r0 - r1 + v1), np.maximum(r1 - r0 + v0, r0 - r1 + u0))
+    b["flip_atk"], b["cert"] = worst("atk"), worst("cert")
+    a = m[m.attack.isin(["fair_dp_t0", "fair_dp_t1"])].pivot_table(index=["dataset", "run", "method", "eps"], columns="attack", values="dp")
+    b = b.merge(a.max(axis=1).rename("paper").reset_index(), on=["dataset", "run", "method", "eps"], how="left")
+    b["best"] = np.maximum(b.flip_atk, b.paper); b["flip_term"] = b.best - b.clean_dp
+    fav1 = b.pos_1 >= b.pos_0
+    b["widen"] = np.where(fav1, b.up_atk_1 + b.down_atk_0, b.up_atk_0 + b.down_atk_1)
+    b["other"] = np.where(fav1, b.down_atk_1 + b.up_atk_0, b.down_atk_0 + b.up_atk_1)
+    P("## S14 Exact worst case and certified bounds")
+    P("")
+    P("For every selected model, run and budget, each test record was attacked on its own with a per-record flip attack (projected sign-gradient steps that push the logit away from the record's current prediction; 50 steps, 5 restarts, integer projection), and interval bound propagation over the feasible box was used to certify records that cannot flip. The shares of each group that can be moved up (predicted 0 to 1) or down (1 to 0) were inserted into Proposition 1 with only the target group editable, taking the worse target group. The attack gives a lower bound on the exact worst case and the certificate an upper bound; no record flipped by the attack was certified as stable. The best attack is the larger of this value and the group-targeted attack of the paper, and the flip term is the best attack minus the clean gap (Corollary 1). Gap-widening flips are records of the group favoured on clean data that can move up plus records of the other group that can move down, as shares of their groups summed over both groups; other flips are the remaining flippable records.")
+    P("")
+    P("*Table S28. Exact worst case at the base budget (mean over runs): clean DP gap, flip term, DP gap under the group-targeted attack of the paper, DP gap from Proposition 1 with the attack's flip shares, best attack, certified upper bound, and shares of gap-widening and other flippable records.*")
+    P("")
+    t = b[b.eps == 1.0].groupby(["dataset", "method"])[["clean_dp", "flip_term", "paper", "flip_atk", "best", "cert", "widen", "other"]].mean()
+    table(["Dataset", "Method", "Clean gap", "Flip term", "Group-targeted attack", "Proposition 1 (attack)", "Best attack", "Certified bound", "Gap-widening flips", "Other flips"],
+          [[DN[d], MN[mt]] + [f3(t.loc[(d, mt), c]) for c in t.columns] for d in DS for mt in MS])
+    P("*Table S29. Best attack and certified upper bound on the group-targeted DP gap by budget multiplier (mean over methods and runs), and share of model–budget cases in which the Proposition 1 value is within 0.01 of the group-targeted attack.*")
+    P("")
+    bb = b.groupby(["dataset", "eps"])[["best", "cert"]].mean()
+    w = b.assign(w=(b.flip_atk - b.paper).abs() <= 0.01).groupby("dataset").w.mean()
+    EPS = sorted(b.eps.unique())
+    table(["Dataset"] + [f"{e:g}×" for e in EPS] + ["Within 0.01"],
+          [[DN[d]] + [f"{bb.loc[(d, e), 'best']:.3f} / {bb.loc[(d, e), 'cert']:.3f}" for e in EPS] + [f"{100 * w[d]:.1f}%"] for d in DS])
 
 open(OUT, "w").write("\n".join(out))
