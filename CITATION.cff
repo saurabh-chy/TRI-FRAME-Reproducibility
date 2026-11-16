@@ -10,4 +10,5 @@ authors:
     given-names: Midhunchakkaravarthy
 version: 1.0.0
 license: MIT
-repository-code: "[public repository URL]"
+repository-code: "https://github.com/saurabh-chy/TRI-FRAME-Reproducibility"
+type: software
