@@ -5,8 +5,8 @@ Classifiers, and How to Train Against It"** (Choudhary, Malhotra and Janarthanan
 
 The package reproduces every number, table and figure in the paper and the supplementary material: the feasible
 threat model and attacks, the six training methods (ERM, Fair-Only, Robust-Only, fair adversarial training,
-the Chai & Wang-style baseline and TRI-FRAME), tuning, evaluation, per-feature attribution, hypervolume and the
-statistical tests, and the exact worst-case analysis of Proposition 1 (per-record flip attacks and certified
+the Chai & Wang-style baseline and TRI-FRAME), tuning, evaluation, per-feature attribution, hypervolume, the
+statistical tests and the exact worst-case analysis of Proposition 1 (per-record flip attacks and certified
 interval bounds).
 
 ## Folder layout
@@ -41,8 +41,8 @@ TRI-FRAME_reproducibility/
 ## Environment
 
 The reported run used Python 3.8.8, PyTorch 2.4.1 (CPU), NumPy 1.24.4, pandas 1.5.3, scikit-learn 1.2.2,
-SciPy 1.10.1 and matplotlib 3.3.4 on Windows (Anaconda) with a
-multi-core CPU and no GPU.
+SciPy 1.10.1 and matplotlib 3.3.4 on Windows (Anaconda) with a multi-core CPU
+and no GPU.
 
 ```
 conda create -n triframe python=3.8.8
@@ -59,12 +59,12 @@ pip install -r requirements.txt
 3. **Full run (about two days on a multi-core laptop CPU).** In `experiments/`, run `run_full.bat` (Windows) or
    `bash run_full.sh`. The pipeline tunes every method (nine configurations each), trains 10 hold-out runs per
    dataset (25 cross-validation folds for South German Credit), runs all attacks at all budgets, the ablations,
-   the λ_fa sensitivity study, the interval bounds and the GBDT reference. It is resumable: finished units are
+   the λ_fa sensitivity study, the full-population interval bounds of Table S23 and the GBDT reference. It is resumable: finished units are
    recorded in `output/full/done.json` and skipped on restart.
 4. **Post-hoc analyses (roughly half a day to a day).** In `experiments/`, run `run_posthoc.bat` or `bash run_posthoc.sh`.
    This computes the per-feature attribution and evaluates every tuned configuration of every method on the
    test set of every run, for the hypervolume. Also resumable (`output/full/posthoc/done_posthoc.json`).
-5. **Exact worst case and certified bounds (several hours).** In `experiments/`, run `run_bounds.bat` or
+5. **Exact worst case and certified bounds (about three hours).** In `experiments/`, run `run_bounds.bat` or
    `bash run_bounds.sh` (or `notebook/TRI_FRAME_bounds.ipynb`). It reloads the saved models, computes for every
    selected model, run and budget, and for every tuned configuration on the first run, the share of each group
    that a feasible edit can flip (per-record attack: lower bound; interval bound propagation: upper bound), and
@@ -77,7 +77,7 @@ To rerun only step 6 on the reported results, point it at `results/full` instead
 ## Determinism
 
 All splits and training runs use fixed seeds (`set_seed` in the pipeline; seeds derived from dataset, run,
-method and configuration in the post-hoc script). PyTorch on CPU is deterministic for this model up to
+method and configuration in the post-hoc and bounds scripts). PyTorch on CPU is deterministic for this model up to
 floating-point summation order, so reruns on other hardware or thread counts may differ in the third decimal.
 
 ## Settings used in the paper
